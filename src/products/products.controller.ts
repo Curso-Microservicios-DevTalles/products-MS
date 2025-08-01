@@ -8,7 +8,7 @@ import { MessagePattern, Payload } from '@nestjs/microservices';
 @Controller('products')
 export class ProductsController {
   // eslint-disable-next-line prettier/prettier
-  constructor(private readonly productsService: ProductsService) { }
+  constructor(private readonly productsService: ProductsService) {}
 
   @MessagePattern({ cmd: 'create' })
   create(@Payload() createProductDto: CreateProductDto) {
